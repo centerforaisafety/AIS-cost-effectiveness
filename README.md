@@ -27,9 +27,9 @@ The `scripts` feed `parameters` into `models` to produce `output`s. The `utiliti
 
 ## Other resources connected to this project
 
-Our [introduction post]() lays out our approach to modeling – including our motivations for using models, the benefits and limitations of our key metric, comparisons between programs for students and professionals, and more.
+Our [introduction post](https://forum.effectivealtruism.org/posts/Ykqh8ku7NHN9CGkdC/modeling-the-impact-of-ai-safety-field-building-programs) lays out our approach to modeling – including our motivations for using models, the benefits and limitations of our key metric, comparisons between programs for students and professionals, and more.
 
-We have two posts evaluating [student programs]() and [professional programs]() respectively.
+We have two posts evaluating [student programs](https://forum.effectivealtruism.org/posts/zYSAFtjasxsfm3nmh/cost-effectiveness-of-student-programs-for-ai-safety) and [professional programs](https://forum.effectivealtruism.org/posts/7kFPFYQSY7ZttoveS/cost-effectiveness-of-professional-field-building-programs) respectively.
 
 Finally, for definitions and values of the parameters used in our models, refer to the [Parameter Documentation](https://docs.google.com/spreadsheets/d/1uK4opqsCmC5nW6G3D1X67KZnQdMGGL1YbpVmQN5OKF8/edit#gid=581108234) sheet.
 

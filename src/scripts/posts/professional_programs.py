@@ -23,16 +23,12 @@ import models.professional_program as mfn_pp
 import utilities.sampling.simulate_results as so
 from utilities.sampling.get_budget_sweep_data import get_budget_sweep_data
 
-# Assumptions
-import utilities.assumptions.research_avenues as ara
-
 # Defaults
 import utilities.defaults.plotting as d_plt
 
 # Plotting
 import utilities.plotting.helper_functions as help
 import utilities.plotting.comparisons as comp
-import utilities.plotting.impact_and_ability as ia
 import utilities.plotting.influence as influence
 import utilities.plotting.robustness as p_rob
 import utilities.plotting.budget as budget

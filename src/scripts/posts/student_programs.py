@@ -23,9 +23,6 @@ import models.student_program as mfn_sp
 # Sampling
 import utilities.sampling.simulate_results as so
 
-# Assumptions
-import utilities.assumptions.research_avenues as ara
-
 # Defaults
 import utilities.defaults.plotting as d_plt
 
