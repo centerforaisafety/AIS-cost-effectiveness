@@ -50,7 +50,7 @@ Pre-requisites
 """
 
 # Parameters for simulating data
-n_sim = 500 * K
+n_sim = 1 * M
 time_points = np.concatenate(
     (
         np.arange(0.0, 0.1, 0.0002),
@@ -142,6 +142,8 @@ future_df_params_means = future_df_params_means.rename(
         "tdc": "Trojan_Detection_Challenge",
         "neurips_social": "NeurIPS_ML_Safety_Social",
         "neurips_workshop": "NeurIPS_ML_Safety_Workshop",
+        "hypothetical:_power_aversion_prize": "Hypothetical:_Power_Aversion_Prize",
+        "hypothetical:_cheaper_workshop": "Hypothetical:_Cheaper_Workshop",
     }
 )
 
@@ -768,22 +770,6 @@ plot_influence = influence.plot_horizontal_budget_qarys_ce(
 plot_influence.set_size_inches((10, 8))
 plot_influence.savefig(
     "output/plots/post_professional-programs/influence.png",
-    dpi=300,
-    bbox_inches="tight",
-)
-
-
-"""
-Value of research avenues
-"""
-
-# Plot
-plot_research_avenue_relevance = ia.plot_impact_bar_chart(ara.impact_df)
-
-# Save the plot to a file
-plot_research_avenue_relevance.set_size_inches((15, 5))
-plot_research_avenue_relevance.savefig(
-    "output/plots/post_professional-programs/research_avenue_relevance.png",
     dpi=300,
     bbox_inches="tight",
 )

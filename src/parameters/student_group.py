@@ -1,5 +1,5 @@
 """
-Parameters for student clubs
+Parameters for student groups
 """
 
 

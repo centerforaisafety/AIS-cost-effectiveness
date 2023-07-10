@@ -656,6 +656,7 @@ def formatted_markdown_table_cost_effectiveness(
         )
     )
     df_formatted.reset_index(inplace=True)
+
     markdown_table = tabulate(
         df_formatted, headers="keys", tablefmt="pipe", showindex=False
     )

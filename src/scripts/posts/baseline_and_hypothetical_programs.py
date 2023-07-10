@@ -37,7 +37,7 @@ Pre-requisites
 """
 
 # Set parameters for simulating results
-n_sim = 300 * K
+n_sim = 1 * M
 time_points = np.concatenate(
     (
         np.arange(0.0, 0.1, 0.0002),
@@ -74,25 +74,25 @@ with open("output/data/professional_programs/df_functions.pkl", "rb") as f:
 with open("output/data/professional_programs/df_params.pkl", "rb") as f:
     df_params_professional = pickle.load(f)
 
-scientist_anomaly_detection_cost = 500 * K
+scientist_trojans_cost = 500 * K
 scientist_scientist_equivalence = 1
-scientist_anomaly_detection_ability = 10
-anomaly_detection_research_relevance = 10
-scientist_anomaly_detection_benefit = (
+scientist_trojans_ability = 10
+trojans_research_relevance = 10
+scientist_trojans_benefit = (
     scientist_scientist_equivalence
-    * scientist_anomaly_detection_ability
-    * anomaly_detection_research_relevance
+    * scientist_trojans_ability
+    * trojans_research_relevance
     * help.calculate_area(
         df_functions_professional["tdc"], end=1, researcher_type="scientist"
     )
 )
-scientist_anomaly_detection_cost_effectiveness = scientist_anomaly_detection_benefit / (
-    scientist_anomaly_detection_cost / (1 * M)
+scientist_trojans_cost_effectiveness = scientist_trojans_benefit / (
+    scientist_trojans_cost / (1 * M)
 )
 
-phd_anomaly_detection_cost = (50 * K) * 5
+phd_trojans_cost = (50 * K) * 5
 phd_scientist_equivalence = 0.1
-phd_anomaly_detection_ability = 10
+phd_trojans_ability = 10
 
 phd_productivity_index_3 = (
     (df_functions_professional["tdc"]["time_point"] - 3).abs().idxmin()
@@ -105,10 +105,10 @@ phd_productivity_0 = df_functions_professional["tdc"].loc[
     phd_productivity_index_0, "productivity_over_t_contender_phd"
 ]
 
-phd_anomaly_detection_benefit = (
+phd_trojans_benefit = (
     phd_scientist_equivalence
-    * phd_anomaly_detection_ability
-    * anomaly_detection_research_relevance
+    * phd_trojans_ability
+    * trojans_research_relevance
     * (
         help.calculate_area(
             df_functions_professional["tdc"],
@@ -118,18 +118,18 @@ phd_anomaly_detection_benefit = (
         )
     )
 )
-phd_anomaly_detection_cost_effectiveness = phd_anomaly_detection_benefit / (
-    phd_anomaly_detection_cost / (1 * M)
+phd_trojans_cost_effectiveness = phd_trojans_benefit / (
+    phd_trojans_cost / (1 * M)
 )
 
 baseline_programs = {
-    "Scientist Anomaly Detection": [
-        scientist_anomaly_detection_cost,
-        scientist_anomaly_detection_benefit,
+    "Baseline:_Scientist_Trojans": [
+        scientist_trojans_cost,
+        scientist_trojans_benefit,
     ],
-    "PhD Anomaly Detection": [
-        phd_anomaly_detection_cost,
-        phd_anomaly_detection_benefit,
+    "Baseline:_PhD_Trojans": [
+        phd_trojans_cost,
+        phd_trojans_benefit,
     ],
 }
 
@@ -239,6 +239,12 @@ hypothetical_df_functions, hypothetical_df_params = so.get_program_data(
 
 # Compute parameter means
 hypothetical_df_params_means = help.compute_parameter_means(hypothetical_df_params)
+
+# Rename programs
+hypothetical_df_params_means = hypothetical_df_params_means.rename(columns={
+    'power_aversion_prize': 'Hypothetical:_Power_Aversion_Prize',
+    'cheaper_workshop': 'Hypothetical:_Cheaper_Workshop'
+})
 
 # Save data
 with open(

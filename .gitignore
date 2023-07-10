@@ -1,2 +1,4 @@
 output/data
 venv*
+*.pyc
+*/__pycache__/

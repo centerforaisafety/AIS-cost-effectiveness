@@ -12,7 +12,7 @@ sys.path.append("src")
 
 # Parameters
 import parameters.mlss as p_m
-import parameters.student_club as p_sg
+import parameters.student_group as p_sg
 import parameters.undergraduate_stipends as p_ur
 
 # Models
@@ -32,18 +32,18 @@ Inputs for data and plot
 # Set parameters for data
 n_sim = 30 * K
 time_points = range(0, 1 + 60)
-programs = ["mlss", "student_club", "undergraduate_stipends"]
-default_parameters = {"mlss": p_m, "student_club": p_sg, "undergraduate_stipends": p_ur}
+programs = ["mlss", "student_group", "undergraduate_stipends"]
+default_parameters = {"mlss": p_m, "student_group": p_sg, "undergraduate_stipends": p_ur}
 master_functions = {
     "mlss": mfn_sp,
-    "student_club": mfn_sp,
+    "student_group": mfn_sp,
     "undergraduate_stipends": mfn_sp,
 }
 
 # Colors used throughout post for different programs
 program_colors = {
     "mlss": "green",
-    "student_club": "purple",
+    "student_group": "purple",
     "undergraduate_stipends": "orange",
 }
 

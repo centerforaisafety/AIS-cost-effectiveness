@@ -13,7 +13,7 @@ sys.path.append("src")
 # Parameters
 import parameters.atlas as p_a
 import parameters.mlss as p_m
-import parameters.student_club as p_sg
+import parameters.student_group as p_sg
 import parameters.undergraduate_stipends as p_ur
 
 # Models
@@ -46,17 +46,17 @@ time_points = np.concatenate(
         np.arange(12.0, 61.0, 1.0),
     )
 )
-programs = ["atlas", "mlss", "student_club", "undergraduate_stipends"]
+programs = ["atlas", "mlss", "student_group", "undergraduate_stipends"]
 default_parameters = {
     "atlas": p_a,
     "mlss": p_m,
-    "student_club": p_sg,
+    "student_group": p_sg,
     "undergraduate_stipends": p_ur,
 }
 master_functions = {
     "atlas": mfn_sp,
     "mlss": mfn_sp,
-    "student_club": mfn_sp,
+    "student_group": mfn_sp,
     "undergraduate_stipends": mfn_sp,
 }
 
@@ -64,7 +64,7 @@ master_functions = {
 program_colors = {
     "atlas": "#e7298a",
     "mlss": "#1b9e77",
-    "student_club": "#984ea3",
+    "student_group": "#984ea3",
     "undergraduate_stipends": "#d95f02",
 }
 

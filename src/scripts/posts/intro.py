@@ -14,7 +14,7 @@ sys.path.append("src")
 # Parameters
 import parameters.atlas as p_a
 import parameters.mlss as p_m
-import parameters.student_club as p_sg
+import parameters.student_group as p_sg
 import parameters.undergraduate_stipends as p_us
 import parameters.tdc as p_p
 import parameters.neurips_social as p_so
@@ -47,7 +47,7 @@ Pre-requisites
 """
 
 # Parameters for simulating data
-n_sim = 500 * K
+n_sim = 1 * M
 time_points = np.concatenate(
     (
         np.arange(0.0, 0.1, 0.0002),
@@ -59,7 +59,7 @@ time_points = np.concatenate(
 programs = [
     "atlas",
     "mlss",
-    "student_club",
+    "student_group",
     "undergraduate_stipends",
     "tdc",
     "neurips_social",
@@ -68,7 +68,7 @@ programs = [
 default_parameters = {
     "atlas": p_a,
     "mlss": p_m,
-    "student_club": p_sg,
+    "student_group": p_sg,
     "undergraduate_stipends": p_us,
     "tdc": p_p,
     "neurips_social": p_so,
@@ -77,7 +77,7 @@ default_parameters = {
 master_functions = {
     "atlas": mfn_sp,
     "mlss": mfn_sp,
-    "student_club": mfn_sp,
+    "student_group": mfn_sp,
     "undergraduate_stipends": mfn_sp,
     "tdc": mfn_pp,
     "neurips_social": mfn_pp,
@@ -170,7 +170,7 @@ help.formatted_markdown_table_cost_effectiveness(
     bold_rows=[
         "Atlas",
         "MLSS",
-        "Student Club",
+        "Student Group",
         "Undergraduate Stipends",
         "Trojan Detection Challenge",
         "NeurIPS ML Safety Social",

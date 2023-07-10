@@ -14,7 +14,7 @@ sys.path.append("src")
 # Parameters
 import parameters.atlas as p_a
 import parameters.mlss as p_m
-import parameters.student_club as p_sg
+import parameters.student_group as p_sg
 import parameters.undergraduate_stipends as p_us
 
 # Models
@@ -49,7 +49,7 @@ Pre-requisites
 """
 
 # Parameters for simulating data
-n_sim = 500 * K
+n_sim = 1 * M
 time_points = np.concatenate(
     (
         np.arange(0.0, 0.1, 0.0002),
@@ -58,17 +58,17 @@ time_points = np.concatenate(
         np.arange(12.0, 61.0, 1.0),
     )
 )
-programs = ["atlas", "mlss", "student_club", "undergraduate_stipends"]
+programs = ["atlas", "mlss", "student_group", "undergraduate_stipends"]
 default_parameters = {
     "atlas": p_a,
     "mlss": p_m,
-    "student_club": p_sg,
+    "student_group": p_sg,
     "undergraduate_stipends": p_us,
 }
 master_functions = {
     "atlas": mfn_sp,
     "mlss": mfn_sp,
-    "student_club": mfn_sp,
+    "student_group": mfn_sp,
     "undergraduate_stipends": mfn_sp,
 }
 
@@ -174,7 +174,7 @@ help.formatted_markdown_table_cost_effectiveness(
     bold_rows=[
         "Atlas",
         "MLSS",
-        "Student Club",
+        "Student Group",
         "Undergraduate Stipends",
     ],
     extra_programs=baseline_programs,
@@ -680,7 +680,7 @@ def generate_research_relevances(program, researcher_types, baseline, endline):
     participant_types = {
         "atlas": researcher_types[0:2],
         "mlss": researcher_types[0:2],
-        "student_club": researcher_types,
+        "student_group": researcher_types,
         "undergraduate_stipends": researcher_types[0:2],
     }
 
@@ -728,22 +728,6 @@ plot_influence = influence.plot_horizontal_budget_qarys_ce(
 plot_influence.set_size_inches((10, 8))
 plot_influence.savefig(
     "output/plots/post_student-programs/influence.png",
-    dpi=300,
-    bbox_inches="tight",
-)
-
-
-"""
-Value of research avenues
-"""
-
-# Plot
-plot_research_avenue_relevance = ia.plot_impact_bar_chart(ara.impact_df)
-
-# Save the plot to a file
-plot_research_avenue_relevance.set_size_inches((15, 5))
-plot_research_avenue_relevance.savefig(
-    "output/plots/post_student-programs/research_avenue_relevance.png",
     dpi=300,
     bbox_inches="tight",
 )

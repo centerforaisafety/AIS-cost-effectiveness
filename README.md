@@ -42,7 +42,7 @@ Finally, for definitions and values of the parameters used in our models, refer 
 3. The [**NeurIPS ML Safety Workshop**](https://neurips2022.mlsafety.org/) (or ‘**NeurIPS Workshop**’): A workshop at a top ML conference.
 4. The [**Atlas Fellowship**](https://www.atlasfellowship.org/): A 10-day in-person program providing a scholarship and networking opportunities for select high school students.
 5. [**ML Safety Scholars**](https://forum.effectivealtruism.org/posts/9RYvJu2iNJMXgWCBn/introducing-the-ml-safety-scholars-program) (or '**MLSS**'): CAIS’s discontinued summer course, designed to teach undergraduates ML safety.
-6. **Student Club** : A high-cost, high-engagement student club at a top university, similar to [HAIST, MAIA](https://www.lesswrong.com/posts/LShJtvwDf4AMo992L/update-on-harvard-ai-safety-team-and-mit-ai-alignment), or [SAIA](https://www.lesswrong.com/posts/zgJCSK5KdkiKDuuCw/the-tree-of-life-stanford-ai-alignment-theory-of-change).
+6. **Student Group** : A high-cost, high-engagement student group at a top university, similar to [HAIST, MAIA](https://www.lesswrong.com/posts/LShJtvwDf4AMo992L/update-on-harvard-ai-safety-team-and-mit-ai-alignment), or [SAIA](https://www.lesswrong.com/posts/zgJCSK5KdkiKDuuCw/the-tree-of-life-stanford-ai-alignment-theory-of-change).
 7. **Undergraduate Stipends**: Specifically, the [ML Safety Student Scholarship](https://www.mlsafety.org/safety-scholarship), which provides stipends to undergraduates connected with research opportunities.
 
 ### Not evaluated in this repository

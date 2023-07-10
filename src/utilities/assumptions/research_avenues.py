@@ -89,8 +89,11 @@ for idx, row in df_expanded.iterrows():
     impact_research_avenues[key] = value
 
 impact_research_avenues["impact_nothing"] = 0.0
-impact_research_avenues["impact_dangerous_capabilities"] = -100.0
+impact_research_avenues["impact_general_capabilities"] = -100.0
 
 impact_df = pd.DataFrame(
     list(impact_research_avenues.items()), columns=["Research Avenue", "Impact"]
 )
+
+# Remove value clarification
+impact_df = impact_df[~impact_df["Research Avenue"].str.contains("value_clarification")]

@@ -292,7 +292,7 @@ def plot_impact_bar_chart(
     # Reorder the research avenues as requested
     custom_order = sorted(
         df_pivot["Research Avenue"].tolist(),
-        key=lambda x: (x == "dangerous_capabilities", x == "nothing", x),
+        key=lambda x: (x == "general_capabilities", x == "nothing", x),
     )
     df_pivot = df_pivot.set_index("Research Avenue").loc[custom_order].reset_index()
 
