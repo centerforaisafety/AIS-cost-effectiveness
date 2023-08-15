@@ -8,6 +8,7 @@ Imports
 """
 
 import sys
+import os
 
 sys.path.append("src")
 
@@ -68,6 +69,8 @@ Cost-effectiveness of baseline programs
 """
 
 # Cost-effectiveness baselines
+
+os.makedirs('output/data/professional_programs', exist_ok = True)
 with open("output/data/professional_programs/df_functions.pkl", "rb") as f:
     df_functions_professional = pickle.load(f)
 

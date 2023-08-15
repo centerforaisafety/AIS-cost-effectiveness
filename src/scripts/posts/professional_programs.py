@@ -8,6 +8,7 @@ Imports
 """
 
 import sys
+import os
 
 sys.path.append("src")
 
@@ -91,6 +92,7 @@ df_functions, df_params = so.get_program_data(
 )
 
 # Save data
+os.makedirs('output/data/professional_programs', exist_ok = True)
 with open("output/data/professional_programs/df_functions.pkl", "wb") as f:
     pickle.dump(df_functions, f)
 
@@ -123,6 +125,7 @@ Cost-effectiveness table
 """
 
 # Load data on hypothetical programs
+os.makedirs('output/data/baseline_and_hypothetical_programs', exist_ok = True)
 with open(
     "output/data/baseline_and_hypothetical_programs/hypothetical_programs_means.pkl",
     "rb",
