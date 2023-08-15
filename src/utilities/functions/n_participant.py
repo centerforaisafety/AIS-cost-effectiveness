@@ -53,9 +53,10 @@ def poisson_mean_entries(expected_award, gamma=0.1, slope=0.3, intercept=10):
     Computes the mean number of entries for a Poisson distribution.
 
     Args:
-        expected_award (float): Expected award.
+        expected_award (np.array): Expected award.
         slope (float): Scaling parameter for expected entries.
         gamma (float): Risk aversion parameter for CRRA utility.
+        intercept (float): Intercept parameter for expected entries.
 
     Returns:
         float: Mean number of entries.
@@ -135,11 +136,12 @@ def compute_n_attendee(variable_cost, max_capacity, gamma=0.3, slope=0.2, interc
     Compute the number of attendees of events.
 
     Args:
-        variable_cost (float): Variable cost.
+        variable_cost (np.array): Variable costs.
         max_capacity (int): Maximum capacity of the program.
         slope (float): Scaling parameter for expected entries.
         gamma (float): Risk aversion parameter for CRRA utility.
-
+        intercept (float): Intercept parameter for expected entries.
+        
     Returns:
         float: Number of attendees.
     """
